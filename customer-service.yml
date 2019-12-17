@@ -34,9 +34,9 @@ spring:
   profiles: dev
   
 customer-service:
-  firstName: DEV-FirstNameNF
-  lastName: DEV-LastName
-  email: dev.default@email.com
+  firstName: DEV-FirstNameNFSPDJ
+  lastName: DEV-LastNameSPDJ
+  email: dev.default534@email.com
   
 ---
 
