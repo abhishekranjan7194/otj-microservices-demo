@@ -1,3 +1,21 @@
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:file:~/customer_db;AUTO_SERVER=true
+      driver-class-name: org.h2.Driver
+      username: sa
+      password: manage
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+      
 management:
   endpoints:
     web:
@@ -10,7 +28,7 @@ messaging:
   routingKey: CustomerCreated
   exchange: customerExchange
 
-# ---
+---
 
 spring:
   profiles: dev
@@ -20,7 +38,7 @@ customer-service:
   lastName: DEV-LastName
   email: dev.default@email.com
   
-# ---
+---
 
 spring:
   profiles: qa
@@ -30,7 +48,7 @@ customer-service:
   lastName: QA-LastName
   email: qa.default@email.com 
   
-# ---
+---
 
 spring:
   profiles: prod
@@ -38,4 +56,4 @@ spring:
 customer-service:
   firstName: PROD-FirstName
   lastName: PROD-LastName
-  email: prod.default@email.com 
+  email: prod.default@email.com
