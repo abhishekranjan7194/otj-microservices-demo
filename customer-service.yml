@@ -28,8 +28,6 @@ messaging:
   routingKey: CustomerCreated
   exchange: customerExchange
 
-
-
 spring:
   profiles: dev
   
@@ -38,8 +36,6 @@ customer-service:
   lastName: DEV-LastName
   email: dev.default@email.com
   
-
-
 spring:
   profiles: qa
  
