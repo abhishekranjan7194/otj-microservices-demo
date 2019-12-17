@@ -1,4 +1,41 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+
+messaging:
+  queue: customerQueue
+  routingKey: CustomerCreated
+  exchange: customerExchange
+
+---
+
+spring:
+  profiles: dev
+  
 customer-service:
   firstName: DEV-FirstNameNF
   lastName: DEV-LastName
   email: dev.default@email.com
+  
+---
+
+spring:
+  profiles: qa
+ 
+customer-service:
+  firstName: QA-FirstName
+  lastName: QA-LastName
+  email: qa.default@email.com 
+  
+---
+
+spring:
+  profiles: prod
+ 
+customer-service:
+  firstName: PROD-FirstName
+  lastName: PROD-LastName
+  email: prod.default@email.com 
